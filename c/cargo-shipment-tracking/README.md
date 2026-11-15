@@ -33,3 +33,22 @@ Beyond simply organizing data in memory, the application acts as an automated re
 * **Linked List Algorithms:** Implementing sorted insertion without relying on post-read array sorting algorithms.
 * **File Input/Output (I/O):** Extensive use of file streams (`fopen`, `fscanf`, `fprintf`, `fclose`) in both read (`"r"`) and write (`"w"`) modes.
 * **String Manipulation:** Handling and comparing textual data (`strcmp`, `strcpy`) for city aggregation and sender grouping.
+
+---
+
+## ▶️ Build and Run
+
+```bash
+gcc cargo_tracking.c -o cargo_tracking
+./cargo_tracking
+```
+
+The program reads `kargolar.txt` from the working directory. Each line describes one shipment:
+
+```text
+<senderID> <trackingCode> <senderName> <city> <day> <status>
+```
+
+`<status>` is either `TeslimEdildi` (delivered) or `Beklemede` (pending). A small sample `kargolar.txt` is included.
+
+Running the program prints the sorted list and writes one `<Name>.txt` file per sender, `bekleyenler.txt` and `rapor.txt` into the working directory. These generated files are not kept in the repository. Sender files are opened in append mode, so delete them before running the program again.
